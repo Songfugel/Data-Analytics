@@ -128,16 +128,18 @@ Credit Problems and Bankruptcies
 '''
 print(ex16)
 ex16a_answer = df['Annual Income'].corr(df['Number of Open Accounts'])
-# 0.12 some, but not much correlation at all
+ex16a_answer_analysis =' 0.12 some, but not much correlation at all'
 
 ex16b_answer_orig = df['Number of Credit Problems'].corr(df['Bankruptcies'])
-# Shows no correlation... which seems wrong
-# .
-# ..
-# ...
-# There seems to be some insane data in bankruptcies we need to remove
+ex16b_answer_orig_analysis = '''
+Shows no correlation at all... which seems completely against common sense
+.
+.
+.
+There seems to be some insane data in bankruptcies with millions of bankruptcies we need to remove'''
 ex16b_answer_crazy_rows = df[df['Bankruptcies'] > 10]
 df = df[df['Bankruptcies'] < 10]
 
 ex16b_answer_fixed = df['Number of Credit Problems'].corr(df['Bankruptcies'])
-# Now ~0.75 very strong correlation as expected
+ex16b_answer_fixed_analysis='''
+Now ~0.75 very strong correlation as expected'''

@@ -14,6 +14,7 @@ ITEM_DESCRIPTION = 'Item Description'
 PURCHASE_DATE = 'Purchase Date'
 DEPARTMENT_NAME = 'Department Name'
 CREATION_DATE = 'Creation Date'
+ACQUISITION_TYPE = 'Acquisition Type'
 
 # some helper stuff
 def get_rows(id_field, id_value):
@@ -72,14 +73,15 @@ print(ex5)
 ex5_answer = df.sort_values(DEPARTMENT_NAME)
 
 ex6 = '''
-How many purchases in the data were IT Goods and had the 
+6. How many purchases in the data were IT Goods and had the 
 total price more than 50000 dollars?
 '''
 print(ex6)
-ex6_answer = df[(df[DEPARTMENT_NAME] == 'IT Goods') & (df[TOTAL_PRICE] > 50000)]
+ex6_answer = df[(df[ACQUISITION_TYPE] == 'IT Goods') & (df[TOTAL_PRICE] > 50000)].count()[0]
 
 ex7 = '''
-How many purchases in the data were IT Goods and had the 
-total price more than 50000 dollars?
+7. How many of the purchases have anything to do with IT? (IT 
+Goods, IT Services, IT Telecommunications
 '''
 print(ex7)
+ex7_answer = df[df[ACQUISITION_TYPE].isin(['IT Goods', 'IT Services', 'IT Telecommunications'])].count()[0]
