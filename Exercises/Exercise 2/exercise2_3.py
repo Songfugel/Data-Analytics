@@ -31,7 +31,7 @@ them into something more usable
       □ We don't also need the Indian rupee –sign (₹)
   o You can use the template in Moodle to help you out with this 
     (Salary filtering, pandas exercise 3)
-¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
+============================================================================'''
 pre_ex1 = df.copy()
 
 ex1_analysis = '''>> ANALYSIS: <<
@@ -53,7 +53,7 @@ Location)? Based on the distribution, is the data balanced or not?
       like "Machine Learning Data Associate and Machine Learning Associate,
       combine these into something common
       
-¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
+============================================================================'''
 pre_ex2 = df.copy()
 
 # DFs for analysis purposes
@@ -154,7 +154,7 @@ fit (either remove them or leave them, based on your analysis
 # factorize Role level into numbers
 label1, unique1 = pd.factorize(df['Role'], sort=False)
 df['ManagerRole'] = label1
-¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
+============================================================================'''
 pre_ex3 = df.copy()
 
 ex3_analysis = '''>> ANALYSIS: <<
@@ -182,7 +182,7 @@ anything? Can we make any assumptions?
 
 pandas:
 df.corr(method="spearman"
-¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
+============================================================================'''
 pre_ex4 = df.copy()
 
 # need to factorize data first

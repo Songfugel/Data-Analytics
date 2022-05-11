@@ -50,7 +50,7 @@ ex1 = ''' << Exercise 1. >>
   o {Note: some extra specification}
       □ {some clarification}
   o {Possibly some extra assignments}
-¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
+============================================================================'''
 
 ex1_analysis = ''' >> ANALYSIS: <<
 {The verbal analysis of the problem as a basis for the steps taking in the
@@ -136,7 +136,7 @@ fit (either remove them or leave them, based on your analysis
 # factorize Role level into numbers
 label1, unique1 = pd.factorize(df['Role'], sort=False)
 df['ManagerRole'] = label1
-¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
+============================================================================'''
 pre_ex3 = df.copy()
 
 ex3_analysis = '''>> ANALYSIS: <<
