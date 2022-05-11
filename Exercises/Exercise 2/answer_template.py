@@ -27,13 +27,13 @@ print('''
       ¤ ¤ ¤ ¤ ¤ ¤    EXERCISES {2}.{3}.x    ¤ ¤ ¤ ¤ ¤ ¤''')
 
 ex = '''
-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+----------------------------------------------------------------------------
 EXERCISES {2}.{3}.x
 
 (ANSWER FORMAT OPTIMIZED FOR SPYDER VARIABLE EXPLORER)
 
 {The exercises description and forewords/assignments/prepwork should be here}
-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-'''
+----------------------------------------------------------------------------'''
 
 # The exercise description as a variable, so it shows in the variable explorer
 # as:
