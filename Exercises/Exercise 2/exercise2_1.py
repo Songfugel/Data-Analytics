@@ -8,12 +8,13 @@ EXERCISE FORMAT OPTIMIZED FOR SPYDER VARIABLE EXPLORER
 
 
 df_loans = pd.read_csv("loans.csv")
-
+df = df_loans.copy()
 ex1 = '''
 1. Remove the Customer ID –column from data
 '''
 print(ex1)
-ex1_answer = df = df_loans.drop("Customer ID", axis=1)
+
+ex1_answer = df = df.drop("Customer ID", axis=1)
 
 ex2 = '''
 2. Print the head of the data

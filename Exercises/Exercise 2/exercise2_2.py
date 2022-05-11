@@ -3,7 +3,7 @@ import pandas as pd
 
 df_purchases = pd.read_csv("purchases.csv")
 
-df = df_purchases
+df = df_purchases.copy()
 
 # column name string literals
 INDEX = 'Index'
