@@ -39,44 +39,44 @@ COL_NUMBER_OF_CREDIT_PROBLEMS = 'Number of Credit Problems'
 ex1 = '''<< Exercise 1. >>
 Remove the Customer ID –column from data
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex1__pre = df.copy()
+pre_ex1 = df.copy()
 ex1_sol = df = df.drop(COL_CUSTOMER_ID, axis=1)
 
 ex2 = '''<< Exercise 2. >>
 Print the head of the data
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex2__pre = df.copy()
+pre_ex2 = df.copy()
 ex2_sol = df.head() 
 
 ex3 = '''<< Exercise 3. >>
 Remove rows from the data that have a too large of a loan
 (Current Loan Amount should be less than 99999999)
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex3__pre = df.copy()
+pre_ex3 = df.copy()
 ex3_sol = df = df[df[COL_CURRENT_LOAN_AMOUNT] < 99999999]
 
 ex4 = '''<< Exercise 4. >>
 Remove rows that have the annual income as NaN (not a number
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex4__pre = df.copy()
+pre_ex4 = df.copy()
 ex4_sol = df.dropna(subset=[COL_ANNUAL_INCOME])
 
 ex4extra = '''<< Exercise 4.Extra >>
 use imputation to use average income as the 
 value instead of NaN
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex4extra_answer = df = df.fillna(df[COL_ANNUAL_INCOME].mean())
+ex4extra_sol = df = df.fillna(df[COL_ANNUAL_INCOME].mean())
 
 ex5 = '''<< Exercise 5. >>
 Get the average Current Loan Amount
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex5__pre = df.copy()
+pre_ex5 = df.copy()
 ex5_sol = round(df[COL_CURRENT_LOAN_AMOUNT].mean(), 2)
 
 ex6 = ''' << Exercise 6. >>
 Get the a) highest and b) lowest Annual Income in the dataset
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex6__pre = df.copy()
+pre_ex6 = df.copy()
 ex6a_sol = round(df[COL_ANNUAL_INCOME].max(), 2)
 ex6b_sol = round(df[COL_ANNUAL_INCOME].min(), 2)
 
@@ -85,7 +85,7 @@ Note: The Actual Annual Income should be : Annual Income – 12 * Monthly Debt
 
 Tip: Create a new field with the above instruction to the DataFrame.
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex7__pre = df.copy()
+pre_ex7 = df.copy()
 ex7_sol = df[COL_ACTUAL_ANNUAL_INCOME] = df.apply(
     lambda x: x[COL_MONTHLY_DEBT]*12, axis=1)
 
@@ -96,7 +96,7 @@ def getValue(id_field, id_value, column_name):
 ex8 = '''<< Exercise 8. >> Get the Home Ownership value of the 
 Loan ID = bbf87a87-22cd-4d10-bd9b-7a9cc1b6e59d
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex8__pre = df.copy()
+pre_ex8 = df.copy()
 ex8_sol = getValue(COL_LOAN_ID,
     'bbf87a87-22cd-4d10-bd9b-7a9cc1b6e59d',
      COL_HOME_OWNERSHIP)
@@ -105,7 +105,7 @@ ex9 = '''<< Exercise 9. >>
 Get the Actual Annual Income of the loan with the
 ID = 76fa89b9-e6a8-49af-afa1-8151315aba8e
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex9__pre = df.copy()
+pre_ex9 = df.copy()
 ex9_sol = getValue(COL_LOAN_ID,
     '76fa89b9-e6a8-49af-afa1-8151315aba8e',
      COL_ACTUAL_ANNUAL_INCOME)
@@ -113,45 +113,45 @@ ex9_sol = getValue(COL_LOAN_ID,
 ex10 = '''<< Exercise 10. >>
 Get the Loan ID of the loan with the smallest Actual Annual Income
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex10__pre = df.copy()
+pre_ex10 = df.copy()
 ex10_sol = df.loc[df[COL_ANNUAL_INCOME].idxmin()][COL_LOAN_ID]
 
 ex11 = '''<< Exercise 11. >>
 How many loans are "Long term"?
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex11__pre = df.copy()
+pre_ex11 = df.copy()
 ex11_sol = df[df[COL_TERM] == 'Long Term'].count()[0]
 
 ex12 = ''' << Exercise 12 >>
 12. How many loaners have more than 1 bankruptcy?
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex12__pre = df.copy()
+pre_ex12 = df.copy()
 ex12_sol = df[df[COL_BANKRUPTCIES] > 1].count()[0]
 
 ex13 = '''
 << Exercise 13. >> How many Short Term loans are for Home Improvements
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex13__pre = df.copy()
+pre_ex13 = df.copy()
 ex13_sol = df[(df[COL_TERM] == 'Short Term') & 
                  (df[COL_PURPOSE] == 'Home Improvements')].count()[0]
 
 ex14 = '''<< Exercise 14. >>
 How many unique loan purposes are there?
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex14__pre = df.copy()
+pre_ex14 = df.copy()
 ex14_sol = len(df[COL_PURPOSE].unique())
 
 ex15 = '''<< Exercise 15. >>
 What are the 3 most common loan purposes?
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex15__pre = df.copy()
+pre_ex15 = df.copy()
 ex15_sol = df.groupby(COL_PURPOSE).count().nlargest(3, COL_LOAN_ID)
 
 ex16 = '''<< Exercise 16. >>
 Is there a correlation between a) Annual Income and Number of Open Accounts or
 is there a correlation between b) Number of Credit Problems and Bankruptcies
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex16__pre = df.copy()
+pre_ex16 = df.copy()
 ex16a_sol = df[COL_ANNUAL_INCOME].corr(df[COL_NUMBER_OF_OPEN_ACCOUNTS])
 ex16a_analysis ='''>> ANALYSIS: <<
 0.12 some, but not much correlation at all'

@@ -32,8 +32,7 @@ them into something more usable
   o You can use the template in Moodle to help you out with this 
     (Salary filtering, pandas exercise 3)
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-
-ex1_pre = df.copy()
+pre_ex1 = df.copy()
 
 ex1_analysis = '''>> ANALYSIS: <<
     The reported salaries seems to be completely irrelevant and unusable data
@@ -136,7 +135,6 @@ def retiteler(title:str)-> str:
 df[COL_JOB_TITLE] = df[COL_JOB_TITLE].apply(retiteler)
 ex2_sol = df.groupby(COL_JOB_TITLE).count()
 
-
 ex3 = '''<< Exercise 3. >>
 Are there any outliers in the data that might affect the averages 
 negatively (certain salaries)? Manage the outliers as you best see 
@@ -170,10 +168,10 @@ ex3_analysis = '''>> ANALYSIS: <<
 
 def fix_outlier_wage(row):
     if row[COL_SALARY] > 30000000 or row[COL_SALARY] < 30000:
-        row[COL_JOB_TITLE]='Outlier'
-        
+        return 'Outlier'
+    return row[COL_JOB_TITLE]
 
-df.apply(fix_outlier_wage, axis=1)
+df[COL_JOB_TITLE] = df.apply(fix_outlier_wage, axis=1)
 ex3_sol = df
 
 ex4 = '''<< Exercise 4. >>
@@ -185,7 +183,7 @@ anything? Can we make any assumptions?
 pandas:
 df.corr(method="spearman"
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
-ex4_pre = df.copy()
+pre_ex4 = df.copy()
 
 # need to factorize data first
 df[COL_JOB_TITLE + '_f'], n1 = pd.factorize(df[COL_JOB_TITLE], sort=False)
