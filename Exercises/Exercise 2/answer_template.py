@@ -16,7 +16,7 @@ CSV_FILE = "data_salaries_india.csv"
 
 # loading up / preparing data, also making a copy of original data to working
 # variable df, that can change
-df_salaries_india = pd.read_csv("data_salaries_india.csv")
+df_salaries_india = pd.read_csv(CSV_FILE)
 df = df_salaries_india.copy()
 
 # Everything using these single-line comments in this file are guidelines for 
@@ -27,17 +27,13 @@ print('''
       ¤ ¤ ¤ ¤ ¤ ¤    EXERCISES {2}.{3}.x    ¤ ¤ ¤ ¤ ¤ ¤''')
 
 ex = '''
-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
-
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-
 EXERCISES {2}.{3}.x
 
 (ANSWER FORMAT OPTIMIZED FOR SPYDER VARIABLE EXPLORER)
 
 {The exercises description and forewords/assignments/prepwork should be here}
-
-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
-
-'''
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-'''
 
 # The exercise description as a variable, so it shows in the variable explorer
 # as:
@@ -52,27 +48,19 @@ x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
 # the variable explorer easy
 
 ex1 = '''
-¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
-Exercise 1.
-
-{What are the main points of this exercise?
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+Exercise 1. {What are the main points of this exercise?
   o {Note: some extra specification}
       □ {some clarification}
   o {Possibly some extra assignments}
-
-¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
-'''
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
 
 ex1_analysis = '''
-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o
-    ANALYSIS:
-    
-    {The verbal analysis of the problem as a basis for the steps taking in the
-     solution if taks is not self-apparent, or the analysis ispart of the 
-     exercise itself}
-    
-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o
-'''
+----------------------------------------------------------------------------
+ANALYSIS: {The verbal analysis of the problem as a basis for the steps taking in the
+solution if taks is not self-apparent, or the analysis ispart of the 
+exercise itself}
+----------------------------------------------------------------------------'''
 # backup of DataFrame state at start of assignment
 ex1__pre = df.copy()
 
@@ -82,7 +70,7 @@ ex1__pre = df.copy()
 
 # The exercise code here using tmp variables that identify exercise, but 
 # different prefix so they won't pollute the variable explorer
-tmp2_role = 'some filtering, calculations, functions etc.'
+tmp1_role = 'some filtering, calculations, functions etc.'
 
 #and finally the solution
 ex1_sol = '{The actual solution a df, value or a verbal answer}'

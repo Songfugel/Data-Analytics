@@ -1,24 +1,48 @@
+''' Exercises 2 – pandas –module '''
+
 import pandas as pd
 print('\nEXERCISES 2.1.x\n')
 
-'''
-EXERCISE FORMAT OPTIMIZED FOR SPYDER VARIABLE EXPLORER
+COL_JOB_TITLE = 'Job Title'
+CSV_FILE = "loans.csv"
 
-'''
-
-
-df_loans = pd.read_csv("loans.csv")
+df_loans = pd.read_csv(CSV_FILE)
 df = df_loans.copy()
-ex1 = '''
-1. Remove the Customer ID –column from data
-'''
-print(ex1)
 
-ex1_answer = df = df.drop("Customer ID", axis=1)
+
+print(''' 
+      ¤ ¤ ¤ ¤ ¤ ¤    EXERCISES 2.1.x    ¤ ¤ ¤ ¤ ¤ ¤''')
+
+ex = '''
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+Put all your exercises in your Git-project and give the repository address to 
+your instructor!
+
+The datasets for these exercises have been collected from kaggle.com (a 
+service providing different datasets for practice)
+
+EXERCISE 2.1
+
+import pandas and read the csv-file found in Moodle (loans.csv). Use 
+Python coding with pandas to answer the questions.
+
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+'''
+
+ex1 = '''
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+Exercise 1. Remove the Customer ID –column from data
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
+ex1__pre = df.copy()
+
+ex1_sol = df = df.drop("Customer ID", axis=1)
 
 ex2 = '''
-2. Print the head of the data
-'''
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+Exercise 2. Print the head of the data
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'''
 print(ex2)
 ex2_answer = df.head() 
 
