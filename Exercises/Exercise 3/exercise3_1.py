@@ -3,10 +3,6 @@ print('''
 ex = '''
 ----------------------------------------------------------------------------
 EXERCISES 3.1.x
-
-(ANSWER FORMAT OPTIMIZED FOR SPYDER VARIABLE EXPLORER)
-
-{The exercises description and forewords/assignments/prepwork should be here}
 ----------------------------------------------------------------------------'''
 # IMPORTS HERE
 # ex.:
