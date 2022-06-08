@@ -146,3 +146,4 @@ Also I suspect the fact that this even also coincides right in the middle of
 of Starbuck's globalization timing had its effect as a sudden global increase
 in coffee demand, and thus also placed even more pressure for the price to increase
 '''
+
